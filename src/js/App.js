@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../styles/App.css";
 import Form from "./component/Form";
 import TodoList from "./component/TodoList";
 
@@ -20,7 +19,13 @@ function App() {
 				todos={todos}
 				setTodos={setTodos}
 			/>
-			<TodoList todos={todos} setTodos={setTodos} />
+			<div>
+				{todos.length > 0 ? (
+					<TodoList todos={todos} setTodos={setTodos} />
+				) : (
+					<div className="noTasks">No tasks, add a task.</div>
+				)}
+			</div>
 		</div>
 	);
 }
