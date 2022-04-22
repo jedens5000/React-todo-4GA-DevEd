@@ -23,7 +23,9 @@ function App() {
 				{todos.length > 0 ? (
 					<TodoList todos={todos} setTodos={setTodos} />
 				) : (
-					<div className="noTasks">No tasks, add a task.</div>
+					<div className="noTasks">
+						No tasks to show, add a new task to create a list.
+					</div>
 				)}
 			</div>
 		</div>
